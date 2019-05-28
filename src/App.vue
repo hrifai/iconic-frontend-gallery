@@ -72,7 +72,7 @@
 
     <v-toolbar color="#48a06a" dense fixed clipped-left app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title @click="$router.push('/movies')" class="mr-5 align-center">
+      <v-toolbar-title @click="$router.push('/menu')" class="mr-5 align-center">
         <span class="title"><v-icon class="mx-3">local_dining</v-icon>Shani's Grill</span>
       </v-toolbar-title>
     </v-toolbar>
