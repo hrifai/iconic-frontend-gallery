@@ -1,38 +1,65 @@
 import Router from 'vue-router'
-import MainCard from '../components/HomeCard.vue'
-import FormCard from "../components/FormCard.vue"
-import ResponseCard from '../components/ResponseCard'
-// import SurveyCard from '../components/SurveyCard'
-import EditCard from '../components/EditCard'
+import LoginCard from '../components/LoginCard.vue'
+import Movies from '../components/Movies'
+import MovieCard from '../components/MovieCard'
+import HistoryCard from '../components/HistoryCard'
+import AddMovie from '../components/AddMovie'
+import CheckoutCard from '../components/CheckoutCard'
+import NotFoundCard from '../components/404Card'
+import LogCard from '../components/LogCard'
+import RecieptCard from '../components/RecieptCard'
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: MainCard,
+      name: 'login',
+      component: LoginCard,
     },
     {
-      path: '/register',
-      name: 'register',
-      component: FormCard,
+      path: '/menu',
+      name: 'movies',
+      component: Movies,
+    },
+    {
+      path: "/movie/:selectedId",
+      component: MovieCard,
+      props: true
+    },
+    {
+      path: "/history",
+      component: HistoryCard,
+      props: true
+    },
+    {
+      path: '/logs',
+      name: 'logs',
+      component: LogCard,
+      props:true
+    },
+    {
+      path: '/reciept',
+      name: 'reciept',
+      component: RecieptCard,
+      props:true
+    },
+    {
+      path: "/addMovie",
+      name: 'addMovie',
+      component: AddMovie,
+      props: true
+    },
+    {
+      path: "/checkout",
+      name: 'checkout',
+      component: CheckoutCard,
+      props: true
     },{
-      path: '/form',
-      name: 'form',
-      component: ResponseCard
-    },
-    // {
-    //   path: '/survey',
-    //   name: 'survey',
-    //   component: SurveyCard
-    // },
-    {
-      path: '/edit',
-      name: 'edit',
-      component: EditCard
+      path: "*",
+      component: NotFoundCard,
     }
-
   ],
   mode: 'history',
 });
 
+export default router
