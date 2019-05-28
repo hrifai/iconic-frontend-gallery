@@ -103,9 +103,12 @@
       </v-card>
     </v-dialog>
 
-    <v-dialog width=200 color="green" v-model="confirmed">
-        <v-btn flat fab color="white" @click="addItemDia=false"><v-icon>close</v-icon></v-btn>
-        <v-layout justify-center class="headline">Order successfully submitted</v-layout>
+    <v-dialog width="300" v-model="confirmed">
+      <v-card color="green darken-3" dark>
+        <v-card-text>
+          Order sucessfully submitted
+        </v-card-text>
+      </v-card>
     </v-dialog>
 
 
