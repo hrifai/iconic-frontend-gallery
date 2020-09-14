@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import App from "./App";
 import Vuetify from "vuetify";
@@ -10,7 +9,7 @@ Vue.config.productionTip = false;
 Vue.use(Vuetify);
 Vue.use(VueRouter);
 
-window.v = new Vue({
+export default new Vue({
   el: "#app",
   router,
   components: { App },
