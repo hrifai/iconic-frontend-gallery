@@ -7,10 +7,6 @@
         </v-img>
       </v-card>
     </v-hover>
-    <div class="mt-2">
-      <span>{{product.name}}</span><br>
-      <span>${{product.price}}</span>
-    </div>
   </div>
 </template>
 
